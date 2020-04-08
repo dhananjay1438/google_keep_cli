@@ -1,3 +1,5 @@
+# Modifying notes wouldn't work unless you don't add re._pattern_type = re.Pattern after importing
+# re in __init__.py file of gkeepapi
 import gkeepapi
 import keyring
 import getpass
@@ -17,7 +19,7 @@ email = 'tempmail1438@gmail.com'
 username = 'tempmail1438'
 
 # Asking user for password as it is not a good practice to define password in variable
-# pass = yxvwpdqkyigxqvux
+
 password = getpass.getpass(prompt='Please enter your password:')
 
 if (keep.login(email, password)):
